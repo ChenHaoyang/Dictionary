@@ -40,15 +40,20 @@ class CorpusGenerator(implicit sc: SparkContext) {
             val pair = x.split(":")
             val word = pair(0)
             val cnt = pair(1)
-            val get = new Get(word.getBytes)
-            get.addColumn(Bytes.toBytes("info"), Bytes.toBytes("id"))
-            val result = dict.get(get)
-            ids.append(Bytes.toString(result.value()) + ":")
-            cnts.append(cnt + ":")
+            val freq = new Get(word.getBytes)
+            freq.addColumn(Bytes.toBytes("info"), Bytes.toBytes("freq"))
+            val freq_re = dict.get(freq)
+            if(freq_re.value() != null){
+              val get = new Get(word.getBytes)
+              get.addColumn(Bytes.toBytes("info"), Bytes.toBytes("id"))
+              val result = dict.get(get)
+              ids.append(Bytes.toLong(result.value()) + ":")
+              cnts.append(cnt + ":")
+            }
           } }
           val newDoc = ids.deleteCharAt(ids.length-1).toString + "," + cnts.deleteCharAt(cnts.length-1).toString
           val put = new Put(r._1.get)
-                        .addColumn(Bytes.toBytes("keywords"), Bytes.toBytes("doc"), newDoc.getBytes)
+                        .addColumn(Bytes.toBytes("corpus"), Bytes.toBytes("doc"), newDoc.getBytes)
           urlInfo.mutate(put)
         })
         
