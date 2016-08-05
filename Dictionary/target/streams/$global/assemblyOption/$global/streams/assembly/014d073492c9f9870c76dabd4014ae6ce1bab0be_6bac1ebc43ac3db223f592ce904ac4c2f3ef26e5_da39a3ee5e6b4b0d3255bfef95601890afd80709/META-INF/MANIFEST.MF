@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: beef
+Build-Jdk: 1.6.0_20
+Package: org.owasp.validator.html
+Implementation-Title: OWASP AntiSamy
+Implementation-Version: 1.4.3
+Implementation-Vendor-Id: org.owasp.antisamy
+Implementation-Vendor: The Open Web Application Security Project (OWASP)
+Main-Class: org.owasp.validator.html.AntiSamy
+

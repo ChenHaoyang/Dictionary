@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: enebo
+Build-Jdk: 1.6.0_26
+Implementation-Title: JCodings (Byte based encoding support library fo
+ r java)
+Implementation-Version: 1.0.7
+

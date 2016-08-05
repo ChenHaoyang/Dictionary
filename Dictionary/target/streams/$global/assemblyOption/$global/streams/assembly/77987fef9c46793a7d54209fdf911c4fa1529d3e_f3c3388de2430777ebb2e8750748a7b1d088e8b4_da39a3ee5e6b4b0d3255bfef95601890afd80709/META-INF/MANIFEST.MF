@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Implementation-Vendor: The Apache Software Foundation
+Implementation-Title: Apache HBase - Hadoop Two Compatibility
+Implementation-Version: 1.2.2
+Implementation-Vendor-Id: org.apache.hbase
+Built-By: busbey
+Build-Jdk: 1.7.0_95
+Specification-Vendor: The Apache Software Foundation
+Specification-Title: Apache HBase - Hadoop Two Compatibility
+Created-By: Apache Maven 3.3.9
+Specification-Version: 1.2.2
+Archiver-Version: Plexus Archiver
+

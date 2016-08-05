@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: cschmidt
+Build-Jdk: 1.6.0_51
+Specification-Title: ESAPI
+Specification-Version: 2.1.0
+Specification-Vendor: The Open Web Application Security Project (OWASP)
+Implementation-Title: ESAPI
+Implementation-Version: 2.1.0
+Implementation-Vendor-Id: org.owasp.esapi
+Implementation-Vendor: The Open Web Application Security Project (OWASP)
+
