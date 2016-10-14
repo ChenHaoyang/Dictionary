@@ -54,8 +54,10 @@ class IDGenerator(implicit sc: SparkContext) {
 }
 
 object IDGenerator {
+  
   def main(args: Array[String]){
     val sparkConf = new SparkConf().setAppName("Dictionary")
+    .setMaster("local[2]")
     implicit val sc = new SparkContext(sparkConf)
       
     val idg = new IDGenerator()
